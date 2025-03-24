@@ -1,6 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { JSX } from "react";
 
+import Header from "../contents/Header.tsx";
+
+import TeamP from "../pages/TeamP.tsx";
+import ContestCalendarP from "../pages/ContestCalendarP.tsx";
+import ContestListP from "../pages/ContestListP.tsx";
+import MainP from "../pages/MainP.tsx";
+
 // 라우트 타입 정의
 type RouteType = {
     path: string;
@@ -9,10 +16,11 @@ type RouteType = {
 
 // 페이지 라우트 배열
 const pageRoute: RouteType[] = [
-    { path: "/main", element: <RendingP /> },
-    { path: "/contest", element: <CalendarP /> },
-    { path: "/contest/Calendar", element: <CalendarP /> },
-    { path: "/contest/list", element: <ListP /> }
+    { path: "/main", element: MainP },
+    { path: "/contest", element: ContestCalendarP },
+    { path: "/contest/calendar", element: ContestCalendarP },
+    { path: "/contest/list", element: ContestListP },
+    { path: "/team", element: TeamP }
 ];
 
 // Routes 컴포넌트

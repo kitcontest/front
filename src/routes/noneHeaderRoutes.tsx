@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import { JSX } from "react";
 
 import headerRoutes from "./headerRoutes.tsx";
+import LoginP from "../pages/LoginP.tsx";
+import SignupP from "../pages/SignupP.tsx";
 
 // 라우트 타입 정의
 type RouteType = {
