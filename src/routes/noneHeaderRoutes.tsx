@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { JSX } from "react";
 
-import headerRoutes from "./headerRoutes.tsx";
-import LoginP from "../pages/LoginP.tsx";
-import SignupP from "../pages/SignupP.tsx";
+import HeaderRoutes from "./headerRoutes";
+
+import LoginP from "../pages/LoginP";
+import SignupP from "../pages/SignupP";
 
 // 라우트 타입 정의
 type RouteType = {
@@ -13,13 +14,13 @@ type RouteType = {
 
 // 페이지 라우트 배열
 const pageRoute: RouteType[] = [
-    { path: "/login", element: LoginP },
-    { path: "/signup", element: SignupP },
-    { path: "/kitest", element: headerRoutes }
+    { path: "/login", element: <LoginP /> },
+    { path: "/signup", element: <SignupP /> },
+    { path: "/kitest", element: <HeaderRoutes /> }
 ];
 
 // Routes 컴포넌트
-const noneHeaderRoutes: JSX.Element = (
+const NoneHeaderRoutes: React.FC = () => (
     <Routes>
         {pageRoute.map((page, idx) => (
             <Route key={idx} path={page.path} element={page.element} />
@@ -27,4 +28,4 @@ const noneHeaderRoutes: JSX.Element = (
     </Routes>
 );
 
-export default noneHeaderRoutes;
+export default NoneHeaderRoutes;

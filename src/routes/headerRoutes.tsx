@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import { JSX } from "react";
 
-import Header from "../contents/Header.tsx";
+import Header from "../contents/Header";
 
-import TeamP from "../pages/TeamP.tsx";
-import ContestCalendarP from "../pages/ContestCalendarP.tsx";
-import ContestListP from "../pages/ContestListP.tsx";
-import MainP from "../pages/MainP.tsx";
+import TeamP from "../pages/TeamP";
+import ContestCalendarP from "../pages/ContestCalendarP";
+import ContestListP from "../pages/ContestListP";
+import MainP from "../pages/MainP";
 
 // 라우트 타입 정의
 type RouteType = {
@@ -16,15 +16,15 @@ type RouteType = {
 
 // 페이지 라우트 배열
 const pageRoute: RouteType[] = [
-    { path: "/main", element: MainP },
-    { path: "/contest", element: ContestCalendarP },
-    { path: "/contest/calendar", element: ContestCalendarP },
-    { path: "/contest/list", element: ContestListP },
-    { path: "/team", element: TeamP }
+    { path: "/main", element: <MainP /> },
+    { path: "/contest", element: <ContestCalendarP /> },
+    { path: "/contest/calendar", element: <ContestCalendarP /> },
+    { path: "/contest/list", element: <ContestListP /> },
+    { path: "/team", element: <TeamP /> }
 ];
 
 // Routes 컴포넌트
-const headerRoutes: JSX.Element = (
+const HeaderRoutes: React.FC = () => (
     <section>
         <Header />
         <Routes>
@@ -35,4 +35,4 @@ const headerRoutes: JSX.Element = (
     </section>
 );
 
-export default headerRoutes;
+export default HeaderRoutes;
