@@ -1,6 +1,6 @@
 interface TypeTeam {
     title : string,
-    MemberCount : bigint,
+    MemberCount : number,
     isLiked : boolean
 };
 

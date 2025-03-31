@@ -22,21 +22,30 @@ const Header = () => {
     }, []);
 
     return (
-        <nav>
+        <nav className="flex justify-between items-center p-4 bg-blue-600 text-white">
+            {/* Logo */}
             <Logo />
-            <div>
+
+            <div className="flex space-x-6">
+                {/* LinkText - Contest List */}
                 <LinkText
                     useTo={{ mode: "header-nav", string: "contest list" }}
                     func={() => console.log("페이지 이동!")}
+                    className="hover:text-yellow-300"
                 />
+                {/* LinkText - Team */}
                 <LinkText
                     useTo={{ mode: "header-nav", string: "team" }}
                     func={() => console.log("페이지 이동!")}
+                    className="hover:text-yellow-300"
                 />
+
+                {/* User Button */}
                 <UserBtn
                     useTo={{ mode: "header-nav", string: "" }}
                     login={login}
                     func={login ? () => console.log("로그아웃 페이지 이동!") : () => console.log("로그인 페이지 이동!")}
+                    className="hover:text-yellow-300"
                 />
             </div>
         </nav>

@@ -1,11 +1,14 @@
 const ScoreSelector = () => {
     return (
-        <div>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
+        <div className="flex justify-around mt-4">
+            {[1, 2, 3, 4, 5].map((score) => (
+                <p
+                    key={score}
+                    className="text-xl cursor-pointer hover:text-blue-500"
+                >
+                    {score}
+                </p>
+            ))}
         </div>
     );
 };

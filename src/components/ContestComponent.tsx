@@ -6,22 +6,19 @@ import { faHeart as regularHeart, faStar as regularStar } from "@fortawesome/fre
 
 const ContestComponent = (contest: typeContest) => {
     return (
-        <div>
-            <div>
-                <div></div>
-
-                <div>
-                    <p>{contest.title}</p>
-                    <p>{contest.dueDate}</p>
+        <div className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col mb-4">
+                <div className="flex justify-between items-center">
+                    <p className="text-lg font-semibold">{contest.title}</p>
+                    <p className="text-sm text-gray-500">{contest.dueDate}</p>
                 </div>
 
-                <div>
+                <div className="flex mt-2 space-x-4">
                     <FontAwesomeIcon
                         icon={contest.isRecommended ? solidHeart : regularHeart}
                         color="red"
                         size="lg"
                     />
-
                     <FontAwesomeIcon
                         icon={contest.isLiked ? solidStar : regularStar}
                         color="gold"
@@ -30,10 +27,10 @@ const ContestComponent = (contest: typeContest) => {
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <p>{contest.recommendationCount}</p>
-                    <p>{contest.teamCount}</p>
+            <div className="flex justify-between items-center">
+                <div className="text-sm text-gray-600">
+                    <p>추천: {contest.recommendationCount}</p>
+                    <p>팀 수: {contest.teamCount}</p>
                 </div>
 
                 <div>
