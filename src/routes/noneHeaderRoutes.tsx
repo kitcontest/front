@@ -14,7 +14,7 @@ type RouteType = {
 
 // 페이지 라우트 배열
 const pageRoute: RouteType[] = [
-    { path: "/login", element: <LoginP /> },
+    { path: "/", element: <LoginP /> },
     { path: "/signup", element: <SignupP /> },
     { path: "/kitest", element: <HeaderRoutes /> }
 ];
